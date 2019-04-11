@@ -1,0 +1,148 @@
+:root {
+	--primary-color: #ccccff;
+	--secondary-color: #fff;
+	--aux-color: #1616164f;
+	--max-width: 1440px;
+}
+/*--------- Elements -----------*/
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.4;
+	background: var(--secondary-color);
+	text-align: center;
+	max-width: var(--max-width);
+	margin: auto;
+}
+main {background: var(--secondary-color)}
+a {
+	text-decoration: none;
+	color: #333;
+}
+li {list-style: none;}
+img {max-width: 100%;}
+/*----------- Utility --------------- */
+.container {
+	width: 90%;
+	margin: auto;
+	max-width: var(--max-width--);
+	overflow: hidden;
+}
+.l-heading {padding: 3rem 0 3rem;}
+header,
+.intro,
+footer {background: var(--primary-color)}
+/*------------ Main Header -------------*/
+.main-header {
+	text-align: center;
+	padding-bottom: 2rem;
+}
+.main-header h1 {padding: 2rem 2rem 2rem 0;}
+.nav ul li a {
+	display: block;
+	padding: 1rem;
+	margin-bottom: .5rem;
+	border-radius: 5px;
+	background: var(--secondary-color);
+	font-weight: bold;
+}
+.nav ul li a:hover {background: var(--aux-color);}
+/*---------- Intro section ----------------*/
+.profile h2 {
+	padding: 1rem 0 3rem;
+	font-size: 1.2rem;
+	color: #666;
+	font-weight: 500;
+}
+/* --------- Portfolio section ---------- */
+.showcase h2 {padding: 2rem 0 1rem;}
+.showcase p {padding-bottom: 3rem;}
+#skills {background: var(--secondary-color);}
+.soft li,
+.hard li {padding-bottom: .25rem;}
+.hard {padding-bottom: 3rem;}
+/*---------- Footer Section -------------*/
+footer {background: var(--primary-color);}
+footer h3 {padding: 1.5rem 0;}
+footer p {padding: 0 0 2rem;}
+#contact p {padding: 0 0 .5rem;}
+.sub-footer {
+	display: flex;
+	justify-content: space-between;
+	padding: 1.5rem 0 0;
+	border-top: 1px solid var(--aux-color);
+	margin-top: 2rem;
+	font-weight: bold;
+}
+.mid-screen {display: none;}
+.sub-footer a {
+	padding: .5rem;
+	background: var(--aux-color);
+	border-radius: 5px;
+}
+.contact-info {color: blue;}
+.sub-footer a:hover {
+	color: var(--secondary-color);
+}
+/*----------- Media Q's ----------------*/
+@media(min-width: 768px) {
+/*------------ Main Header -------------*/
+	.main-header,
+	.nav ul {
+		display: flex;
+		align-items: center;
+	}
+	.main-header {
+		flex-direction: column;
+	}
+	.nav ul li a {
+		background: var(--primary-color);
+	}
+	/*---------- Intro section ----------------*/
+	.profile {
+		display: flex;
+		flex-direction: row-reverse;
+		padding-bottom: 3rem;
+	}
+	.profile h2 {
+		text-align: left;
+		padding: 0 .75rem 0 0;
+		font-size: 1.2rem;
+		color: #666;
+	}
+	/*-------------- showcase ----------------*/
+	.showcase {
+			display: flex;
+			flex-wrap: wrap;
+	}
+	.row {
+		flex: 1 50%;
+		padding-right: .5rem;
+	}
+	.building-skills {width:30%;}
+	.soft li,
+	.hard li {padding-bottom: .5rem;}
+	.soft ul {border-right: 2px solid var(--aux-color);}
+	.soft,
+	.hard {margin-bottom: 3rem;}
+	/*---------- Footer Section -------------*/
+	.mid-screen {display: flex;}
+	.mid-screen li {padding-right: .5rem;}
+	.small-screen {display: none;}
+}
+@media(min-width:1024px) {
+	/*------------ Main Header ----------------*/
+	.main-header {
+		flex-direction: row;
+		justify-content: space-between;
+		padding-bottom: 0;
+	}
+	/*----------- Portfolio Section ---------*/
+	.row {
+		flex-basis: 33%;
+	}
+}
